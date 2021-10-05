@@ -1,0 +1,22 @@
+{
+  "name": "teste-crud-api-rest-em-cypress",
+  "version": "1.0.0",
+  "description": "Testando uma api rest fake em cypress, utilizando os principais métodos -> GET, POST, PUT, DELETE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenHurJF/Teste-CRUD-API-Rest-em-Cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenHurJF/Teste-CRUD-API-Rest-em-Cypress/issues"
+  },
+  "homepage": "https://github.com/BenHurJF/Teste-CRUD-API-Rest-em-Cypress#readme",
+  "dependencies": {
+    "cypress": "^8.5.0"
+  }
+}
