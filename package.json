@@ -4,7 +4,8 @@
   "description": "Testando uma api rest fake em cypress, utilizando os principais métodos -> GET, POST, PUT, DELETE",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",
