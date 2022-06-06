@@ -2,15 +2,15 @@ Cypress.Commands.add('getRequestFakeApi', (uri, id) => {
   fetch(cypress.env('baseUrlfakeApi') + uri, '/' + id)
 }).then((response) => {response.body});
 
-Cypress.Commands.add('postRequestFakeApi', (uri, title, body, userId) => {
+Cypress.Commands.add('postRequestFakeApi', (uri, project) => {
      cy
      .request({
          method: 'POST',
          url: cypress.env('baseUrlfakeApi') + uri,
           body: JSON.stringify({
-          title: title,
-          body: body,
-          userId: userId,
+          title: project.title,
+          body: project.body,
+          userId: project.userId,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
