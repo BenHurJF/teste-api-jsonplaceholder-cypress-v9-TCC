@@ -1,7 +1,7 @@
 const CRIAR = {
-  title: 'CRIAR',
-  body: 'CRIAR',
-  id: ''
+  title: '',
+  body: '',
+  userId: ''
 }
 
 module.exports = {
