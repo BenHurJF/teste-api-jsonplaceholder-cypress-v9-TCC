@@ -1,20 +1,31 @@
 /// <reference types="cypress" />
-const { createPost, project } = require('../requests/POSTposts.request')
+const { createPost } = require('../requests/POSTposts.request')
 const { allPosts, getPost } = require('../../posts/requests/GETpost.request')
 
 describe('Testing get posts', () => {
+
+    const faker = require('faker');
+
+    const POST_ID = {
+        id: faker.random.number()
+}
+
     it('request get in all posts', () => {
        allPosts()
-    })
+       cy.get('@allBodyPosts').then((response) => {
+           expect(response.status).eq(200)
+           expect(response.body.length).to.be.above(40)
+       });
+    });
+
     it('request get one post', () => {
-        createPost().then((result) => {
-        const BODY_ID = result.body.id;
-        getPost(BODY_ID).then((response) => {
-           expect(response.status).to.be.equal(200)
-           expect(response.body.tittle).to.be.equal(project.title)
-           expect(response.body.body).to.be.equal(project.body)
-           expect(response.body.userId).to.be.equal(project.userId)
-        })
+        // createPost()
+        // cy.get('@postCreated').then((resposta) => {
+        //    expect(resposta.status).eq(201)
+        // })
+        getPost(POST_ID.id)
+        cy.get('@getOnePost').then(resposta => {
+             
         })
      });
 });

@@ -4,6 +4,8 @@
   "description": "Testando uma api rest fake em cypress, utilizando os principais métodos -> GET, POST, PUT, DELETE",
   "main": "index.js",
   "scripts": {
+    "eslint": "eslint cypress/",
+    "lint-fix": "eslint cypress/ --fix",
     "cypress:open": "./node_modules/.bin/cypress open",
     "cypress:run": "./node_modules/.bin/cypress run"
   },
@@ -19,7 +21,11 @@
   "homepage": "https://github.com/BenHurJF/Teste-CRUD-API-Rest-em-Cypress#readme",
   "dependencies": {
     "cypress": "^8.5.0",
-    "faker": "^6.6.6",
-    "lint": "^0.7.0"
+    "lint-fix": "^0.24.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "faker": "^5.5.3"
   }
 }

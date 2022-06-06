@@ -1,12 +1,23 @@
-Cypress.Commands.add('getRequestFakeApi', (uri, id) => {
-  fetch(cypress.env('baseUrlfakeApi') + uri, '/' + id)
-}).then((response) => {response.body});
+/// <reference types="cypress" />
 
-Cypress.Commands.add('postRequestFakeApi', (uri, project) => {
+Cypress.Commands.add('getRequestFakeApi', (uri) => {
+  cy
+    .request({
+      method: 'GET',
+      url: Cypress.env('baseUrlfakeApi') + uri,
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      },
+      failOnStatusCode: false
+    });
+});
+
+Cypress.Commands.add('postRequestFakeApi', (project) => {
+  const uri = 'posts';
      cy
      .request({
          method: 'POST',
-         url: cypress.env('baseUrlfakeApi') + uri,
+         url: Cypress.env('baseUrlfakeApi') + uri,
           body: JSON.stringify({
           title: project.title,
           body: project.body,
@@ -16,14 +27,14 @@ Cypress.Commands.add('postRequestFakeApi', (uri, project) => {
         'Content-type': 'application/json; charset=UTF-8',
       },
          failOnStatusCode: false,
-     }).then((response) => response.id)
+     });
 });
 
 Cypress.Commands.add('putRequestFakeApi', (uri) => {
     cy
     .request({
         method: 'PUT',
-        url: cypress.env('baseUrlfakeApi') + uri,
+        url: Cypress.env('baseUrlfakeApi') + uri,
         body: JSON.stringify({
           id: 1,
           title: 'foo',
@@ -41,7 +52,7 @@ Cypress.Commands.add('deleteRequestFakeApi', (uri) => {
     cy
     .request({
         method: 'DELETE',
-        url: cypress.env('baseUrlfakeApi') + uri,
+        url: Cypress.env('baseUrlfakeApi') + uri,
          body: JSON.stringify({
          title: 'foo',
          body: 'bar',
