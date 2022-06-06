@@ -6,6 +6,9 @@ function allbooks() {
         method: 'GET',
         url: 'books',
         failOnStatusCode: false,
+        body: {
+            
+        }
     })
 }
 
