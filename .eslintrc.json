@@ -1,6 +1,7 @@
 {
     "plugins": [
       "cypress"
-    ]
+    ],
+    "parser": "@babel/eslint-parser"
   }
     

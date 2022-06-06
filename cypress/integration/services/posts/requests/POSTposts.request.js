@@ -18,5 +18,4 @@ function createPost() {
  
  module.exports = {
     createPost,
-    project,
  }
