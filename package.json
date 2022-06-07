@@ -24,6 +24,7 @@
     "lint-fix": "^0.24.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.18.2",
     "eslint": "^8.17.0",
     "eslint-plugin-cypress": "^2.12.1",
     "faker": "^5.5.3"

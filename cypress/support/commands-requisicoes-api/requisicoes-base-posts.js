@@ -9,7 +9,7 @@ Cypress.Commands.add('getRequestFakeApi', (uri) => {
         'Content-type': 'application/json; charset=UTF-8'
       },
       failOnStatusCode: false
-    });
+    }).as('pegarUserId');
 });
 
 Cypress.Commands.add('postRequestFakeApi', (project) => {
@@ -18,10 +18,10 @@ Cypress.Commands.add('postRequestFakeApi', (project) => {
      .request({
          method: 'POST',
          url: Cypress.env('baseUrlfakeApi') + uri,
-          body: JSON.stringify({
-          title: project.title,
-          body: project.body,
-          userId: project.userId,
+         body: JSON.stringify({
+           title: project.title,
+           body: project.body,
+           userId: project.userId,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -30,16 +30,17 @@ Cypress.Commands.add('postRequestFakeApi', (project) => {
      });
 });
 
-Cypress.Commands.add('putRequestFakeApi', (uri) => {
+Cypress.Commands.add('putRequestFakeApi', (id, project) => {
+  const uri = 'posts/';
     cy
     .request({
         method: 'PUT',
-        url: Cypress.env('baseUrlfakeApi') + uri,
+        url: Cypress.env('baseUrlfakeApi') + uri + id,
         body: JSON.stringify({
-          id: 1,
-          title: 'foo',
-          body: 'bar',
-          userId: 1,
+          id: project.id,
+          title: project.title,
+          body: project.body,
+          userId: project.userId,
      }),
      headers: {
        'Content-type': 'application/json; charset=UTF-8',
@@ -54,9 +55,9 @@ Cypress.Commands.add('deleteRequestFakeApi', (uri) => {
         method: 'DELETE',
         url: Cypress.env('baseUrlfakeApi') + uri,
          body: JSON.stringify({
-         title: 'foo',
-         body: 'bar',
-         userId: 1,
+           title: 'foo',
+           body: 'bar',
+           userId: 1,
      }),
      headers: {
        'Content-type': 'application/json; charset=UTF-8',
