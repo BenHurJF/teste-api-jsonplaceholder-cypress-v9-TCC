@@ -49,19 +49,14 @@ Cypress.Commands.add('putRequestFakeApi', (id, project) => {
     });
 });
 
-Cypress.Commands.add('deleteRequestFakeApi', (uri) => {
+Cypress.Commands.add('deleteRequestFakeApi', (uri, id) => {
     cy
     .request({
         method: 'DELETE',
-        url: Cypress.env('baseUrlfakeApi') + uri,
-         body: JSON.stringify({
-           title: 'foo',
-           body: 'bar',
-           userId: 1,
-     }),
+        url: Cypress.env('baseUrlfakeApi') + uri + id,
      headers: {
        'Content-type': 'application/json; charset=UTF-8',
      },
         failOnStatusCode: false,
-    });
+});
 });
