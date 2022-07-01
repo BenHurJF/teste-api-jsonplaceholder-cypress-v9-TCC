@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://fakerestapi.azurewebsites.net/api/v1/",
     "testFiles": "**/*spec.js",
-    "video": false
+    "videos": false,
+    "imagens": false
 }

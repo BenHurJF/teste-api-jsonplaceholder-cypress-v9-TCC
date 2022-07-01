@@ -6,7 +6,7 @@ describe('Testing get posts', () => {
     const faker = require('faker');
 
     const POST_ID = {
-        id: faker.random.number(20)
+        id: faker.random.number(10)
 }
 
     it('request get in all posts', () => {

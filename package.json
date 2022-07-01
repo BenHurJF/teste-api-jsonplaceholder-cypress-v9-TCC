@@ -6,8 +6,8 @@
   "scripts": {
     "eslint": "eslint cypress/",
     "lint-fix": "eslint cypress/ --fix",
-    "cypress:open": "./node_modules/.bin/cypress open",
-    "cypress:run": "./node_modules/.bin/cypress run"
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",
@@ -19,10 +19,8 @@
     "url": "https://github.com/BenHurJF/Teste-CRUD-API-Rest-em-Cypress/issues"
   },
   "homepage": "https://github.com/BenHurJF/Teste-CRUD-API-Rest-em-Cypress#readme",
-  "dependencies": {
-    "cypress": "^8.5.0"
-  },
   "devDependencies": {
+    "cypress": "9.6",
     "faker": "^5.5.3"
   }
 }
