@@ -1,9 +1,0 @@
-{
-    "plugins": [
-      "cypress"
-    ],
-    "parser":"babel-eslint-parser",
-    "parserOptions": {
-      "ecmaVersion": "latest"
-    }
-}
