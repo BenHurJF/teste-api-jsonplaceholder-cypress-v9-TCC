@@ -1,5 +1,5 @@
 {
     "testFiles": "**/*spec.js",
-    "videos": false,
+    "Video": false,
     "imagens": false
 }

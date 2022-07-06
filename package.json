@@ -4,8 +4,8 @@
   "description": "Testando uma api rest fake em cypress, utilizando os principais métodos -> GET, POST, PUT, DELETE",
   "main": "index.js",
   "scripts": {
-    "open": "Cypress open",
-    "run": "Cypress run",
+    "OPEN": "Cypress open",
+    "CLI": "Cypress run",
     "lint": "eslint . --fix"
   },
   "repository": {

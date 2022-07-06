@@ -9,6 +9,8 @@
 
 - 3. abrir o terminal e dar npm i
 
-- 4. executar o comando npx cypress open, para abrir as specs de teste 
-ou npm run cypress para executar todas as specs do projeto em modo heandless
+- 4. Comandos para rodar:
 
+- 5. npx cypress open / npm run OPEN-> Modo interface gráfica
+
+- 6. npx cypress run / npm run CLI-> Modo Headless
