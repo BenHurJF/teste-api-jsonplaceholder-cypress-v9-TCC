@@ -1,18 +1,23 @@
 /// <reference types="cypress" />
-const { getPost } = require('../../posts/requests/GETpost.request');
-const { createPost } = require('../../posts/requests/POSTposts.request');
+const { allPosts, getPost } = require('../requests/GETpost.request')
 
-describe('Testing posts CREATED', () => {
+describe('Testing get posts', () => {
+
     const faker = require('faker');
+
     const POST_ID = {
-        id: faker.random.number(20)
+        id: faker.random.number(10)
 }
 
-    it('Created post and validation', () => {
-        createPost()
-        cy.get('@postCreated').then((resposta) => {
-           expect(resposta.status).eq(201)
-        })
+    it('request get in all posts', () => {
+       allPosts()
+       cy.get('@allBodyPosts').then((response) => {
+           expect(response.status).eq(200)
+           expect(response.body.length).to.be.above(40)
+       });
+    });
+
+    it('request get one post', () => {
         getPost(POST_ID.id)
         cy.get('@getOnePost').then(resposta => {
             expect(resposta.status).to.equal(200);
@@ -20,6 +25,6 @@ describe('Testing posts CREATED', () => {
             expect(resposta.body.id).to.be.equal(POST_ID.id);
             expect(resposta.body).to.have.property('title');
             expect(resposta.body).to.have.property('userId');
-        });
+        })
      });
 });
