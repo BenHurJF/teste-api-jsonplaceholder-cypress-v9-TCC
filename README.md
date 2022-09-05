@@ -1,5 +1,5 @@
 # Teste_CRUD_da_API_Rest-JSON_Placeholder-com_Cypress
- Testando uma api rest fake em cypress, utilizando os principais métodos -> GET, POST, PUT, DELETE
+ Testando uma api rest fake em cypress, utilizando os métodos http: GET, POST, PUT, DELETE
 
 # Recurso Automatizado: "POSTS/Postagens"
 
