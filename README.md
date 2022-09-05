@@ -1,16 +1,16 @@
-# Teste-CRUD-API-Rest-em-Cypress
+# Teste_CRUD_da_API_Rest-JSON_Placeholder-com_Cypress
  Testando uma api rest fake em cypress, utilizando os principais métodos -> GET, POST, PUT, DELETE
 
- ### como utilizar ###
+# Recurso Automatizado: "POSTS/Postagens"
 
-- 1. Clonar o projeto em uma pasta
+# Como utilizar
 
-- 2. abrir a pasta no vs code
+- Clonar o projeto em uma pasta
 
-- 3. abrir o terminal e dar npm i
+- abrir o terminal e rodar npm install
 
-- 4. Comandos para rodar:
+- Comandos para executar o projeto:
 
-- 5. npx cypress open / npm run OPEN-> Modo interface gráfica
+- npx cypress open / npm run OPEN   -  (Modo interface gráfica do Cypress)
 
-- 6. npx cypress run / npm run CLI-> Modo Headless
+- npx cypress run / npm run CLI   -  (Modo Headless - Terminal)
