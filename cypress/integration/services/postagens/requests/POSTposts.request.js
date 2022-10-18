@@ -5,7 +5,7 @@ const faker = require('faker');
 const project = { 
     title: `title-${faker.random.words(1)}`,
     body: faker.random.words(1),
-    userId: faker.random.number(1)
+    userId: faker.datatype.number(1)
  }
 
 function createPost() {
