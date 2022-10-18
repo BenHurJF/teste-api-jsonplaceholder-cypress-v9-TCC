@@ -20,7 +20,6 @@
   "homepage": "https://github.com/BenHurJF/Teste-CRUD-API-Rest-em-Cypress#readme",
   "devDependencies": {
     "cypress": "9.4",
-    "eslint": "^8.18.0",
     "faker": "^5.5.3"
   }
 }
